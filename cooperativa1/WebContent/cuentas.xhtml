@@ -42,7 +42,7 @@
 		</p:column>
 		</p:dataTable>
 		<p:column headerText="Ver transacciones">
-		<p:commandButton value="ver transacciones" action="#{cuentasMb.verTransacciones(cue)}"update="form1:transacciones"/>
+		<p:commandButton value="ver transacciones" action="#{cuentasMb.verTransacciones(cue)}" update="form1:transacciones"/>
 		</p:column>
 		<p:dataTable id="transacciones" var="tra" value="#{cuentasMb.transacciones}">
 		<p:column headerText="id transaccion">
