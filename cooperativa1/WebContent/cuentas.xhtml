@@ -29,7 +29,16 @@
 		<h:outputText value="#{cue.numeroCuenta}"/>
 		</p:column>
 		<p:column headerText="Tipo de Cuenta">
-		<h:outputText value="#{cue.numeroCuenta}"/>
+		<h:outputText value="#{cue.cuentatipo.nombres}"/>
+		</p:column>
+		<p:column headerText="Total cargos">
+		<h:outputText value="#{cue.totalCargos}"/>
+		</p:column>
+		<p:column headerText="Total abonos">
+		<h:outputText value="#{cue.totalAbonos}"/>
+		</p:column>
+		<p:column headerText="Saldo">
+		<h:outputText value="#{cue.saldo}"/>
 		</p:column>
 		</p:dataTable>
 	</h:form>
