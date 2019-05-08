@@ -9,7 +9,7 @@
 
 <h:head></h:head>
 <h:body>
-	<h:form>
+	<h:form id="form1">
 		<p:dataTable id="afiliados" var="af" value="#{cuentasMb.afiliados}">
 			<p:column headerText="Nombres">
 			<h:outputText value="#{af.nombres}"/>
@@ -21,7 +21,7 @@
 			<h:outputText value="#{af.clientes.get(0).esMiembro}"/>
 			</p:column>
 			<p:column headerText="ver cuentas">
-			<p:commandButton value="ver cuentas" action="#{cuentasMb.verCuentas(af)}"/>
+			<p:commandButton value="ver cuentas" action="#{cuentasMb.verCuentas(af)}" update="form1:cuentas"/>
 			</p:column>
 		</p:dataTable>
 		<p:dataTable id="cuentas" var="cue" value="#{cuentasMb.cuentas}">
@@ -29,7 +29,7 @@
 		<h:outputText value="#{cue.numeroCuenta}"/>
 		</p:column>
 		<p:column headerText="Tipo de Cuenta">
-		<h:outputText value="#{cue.cuentatipo.nombres}"/>
+		<h:outputText value="#{cue.cuentatipo.nombreTipo}"/>
 		</p:column>
 		<p:column headerText="Total cargos">
 		<h:outputText value="#{cue.totalCargos}"/>
