@@ -29,16 +29,33 @@
 		<h:outputText value="#{cue.numeroCuenta}"/>
 		</p:column>
 		<p:column headerText="Tipo de Cuenta">
-		<h:outputText value="#{cue.cuentatipo.nombreTipo}"/>
+		<h:outputText value="#{cue.cuentatipo.nombreTipo }"/>
 		</p:column>
 		<p:column headerText="Total cargos">
 		<h:outputText value="#{cue.totalCargos}"/>
-		</p:column>
+		</p:column> 
 		<p:column headerText="Total abonos">
 		<h:outputText value="#{cue.totalAbonos}"/>
 		</p:column>
 		<p:column headerText="Saldo">
 		<h:outputText value="#{cue.saldo}"/>
+		</p:column>
+		</p:dataTable>
+		<p:column headerText="Ver transacciones">
+		<p:commandButton value="ver transacciones" action="#{cuentasMb.transacciones}"update="form1:transacciones"/>
+		</p:column>
+		<p:dataTable id="transacciones" var="tra" value="#{cuentasMb.transacciones}">
+		<p:column headerText="id transaccion">
+		<h:outputText value="#{tra.idTransaccion}"/>
+		</p:column>
+		<p:column headerText="Cargo">
+		<h:outputText value="#{tra.montocargo}"/>
+		</p:column>
+		<p:column headerText="Monto Abono">
+		<h:outputText value="#{tra.montoabono}"/>
+		</p:column> 
+		<p:column headerText="Fecha">
+		<h:outputText value="#{tra.fecha}"/>
 		</p:column>
 		</p:dataTable>
 	</h:form>
