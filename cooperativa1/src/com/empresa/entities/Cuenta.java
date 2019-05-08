@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @NamedQueries({
 	@NamedQuery(name="Cuenta.findAll", query="SELECT c FROM Cuenta c"),
-	@NamedQuery(name="cuentas.byCliente", query="SELECT c FROM Cuenta c")
+	@NamedQuery(name="cuentas.byCliente", query="SELECT c FROM Cuenta c WHERE c.cliente.idCliente =:idCliente")  
 })
 
 public class Cuenta implements Serializable {

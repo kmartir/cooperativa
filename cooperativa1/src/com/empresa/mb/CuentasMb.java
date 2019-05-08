@@ -44,7 +44,7 @@ public class CuentasMb {
 		return afiliadoSeleccionado;
 	}
 	public void verCuentas(Persona per) {
-		cuentas =cuDao.geCuenta(per.getClientes().get(0));
+		cuentas =cuDao.getCuentas(per.getClientes().get(0));
 	}
 
 	public void setAfiliadoSeleccionado(Persona afiliadoSeleccionado) {
