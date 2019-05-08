@@ -10,8 +10,12 @@ import java.util.Date;
  * 
  */
 @Entity
+@NamedQueries({
+	@NamedQuery(name="Transaccione.findAll", query="SELECT t FROM Transaccione t"),
+	@NamedQuery(name="transacciones.byCuenta", query="SELECT t FROM Transaccione t WHERE t.cuenta.idCuenta =:idCuenta")
+})
 @Table(name="transacciones")
-@NamedQuery(name="Transaccione.findAll", query="SELECT t FROM Transaccione t")
+
 public class Transaccione implements Serializable {
 	private static final long serialVersionUID = 1L;
 

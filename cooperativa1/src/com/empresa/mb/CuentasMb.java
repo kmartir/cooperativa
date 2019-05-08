@@ -36,6 +36,11 @@ public class CuentasMb {
 		getClientes();		
 	}
 	
+	public void verTransacciones(Cuenta cuen) {
+		transacciones = cuDao.getTransacciones(cuen);
+		
+	}
+	
 	public void getClientes() {
 		afiliados = cuDao.getClientes();
 	}

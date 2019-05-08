@@ -43,8 +43,21 @@ public class CuentaDao {
 			cuentas = new ArrayList<Cuenta>();
 			cuentas = em.createNamedQuery("cuentas.byCliente").setParameter("idCliente", cli.getIdCliente()).getResultList();
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		return cuentas;
 	}
-}
+	
+	public List<Transaccione>getTransacciones(Cuenta cuen){
+		EntityManagerFactory emf= Persistence.createEntityManagerFactory("cooperativa");
+		EntityManager em= emf.createEntityManager();
+		try {
+			transacciones = new ArrayList<Transaccione>();
+			transacciones = em.createNamedQuery("transacciones.byCuenta").setParameter("idCuenta", cuen.getIdCuenta()).getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return transacciones;
+	}
+	}
+
