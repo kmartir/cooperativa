@@ -23,7 +23,7 @@ public class Cuenta implements Serializable {
 	@Column(name="id_cuenta")
 	private int idCuenta;
 
-	private String numeroUnico;
+	private String numeroCuenta;
 
 	private float saldo;
 
@@ -56,12 +56,14 @@ public class Cuenta implements Serializable {
 		this.idCuenta = idCuenta;
 	}
 
-	public String getNumeroUnico() {
-		return this.numeroUnico;
+	
+
+	public String getNumeroCuenta() {
+		return numeroCuenta;
 	}
 
-	public void setNumeroUnico(String numeroUnico) {
-		this.numeroUnico = numeroUnico;
+	public void setNumeroCuenta(String numeroCuenta) {
+		this.numeroCuenta = numeroCuenta;
 	}
 
 	public float getSaldo() {

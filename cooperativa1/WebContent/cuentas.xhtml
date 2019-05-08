@@ -24,8 +24,13 @@
 			<p:commandButton value="ver cuentas" action="#{cuentasMb.verCuentas(af)}"/>
 			</p:column>
 		</p:dataTable>
-		<p:dataTable>
-		
+		<p:dataTable id="cuentas" var="cue" value="#{cuentasMb.cuentas}">
+		<p:column headerText="Numero de Cuenta">
+		<h:outputText value="#{cue.numeroCuenta}"/>
+		</p:column>
+		<p:column headerText="Tipo de Cuenta">
+		<h:outputText value="#{cue.numeroCuenta}"/>
+		</p:column>
 		</p:dataTable>
 	</h:form>
 </h:body>
